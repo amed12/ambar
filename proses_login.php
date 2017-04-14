@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'koneksi.php';
 $usern = $_POST['username'];
 $passm = $_POST['password'];
@@ -13,6 +12,8 @@ $data = mysqli_fetch_array($hasil);
 if ($usern == $data['username'] && $passm==$data['password'])
 {
     // menyimpan username dan level ke dalam session
+
+	session_start();
     $_SESSION['id_user'] = $data['id_user'];  
    	header('location:index.php');
 }
