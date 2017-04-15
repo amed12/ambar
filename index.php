@@ -353,6 +353,7 @@ $kategori=$row['kategori'];
     <script type="text/javascript" src="../../bootstrap-datepicker.js"></script>
 
     <script src="supplier/customer.js"></script>
+     <script src="chart/Chart.js" ></script>
 
   </body>
   </html>

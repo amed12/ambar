@@ -15,7 +15,7 @@
     </a>
     <ul class="treeview-menu">
       <li><a href=""><i class="fa fa-circle-o"></i> Input pengeluaran </a></li>
-      <li><a href=""><i class="fa fa-circle-o"></i> Lihat grafik trip</a></li>
+      <li><a href="?p=grafik/graph"><i class="fa fa-circle-o"></i> Lihat grafik trip</a></li>
     </ul>
   </li>
   <li>
