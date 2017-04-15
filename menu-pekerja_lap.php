@@ -6,7 +6,7 @@
     </a>
   </li>
   <li>
-    <a href="?p=data-trip2">
+    <a href="?p=detail-trip">
       <i class="fa fa-files-o"></i>
       <span>Detail Trip</span>
     </a>

@@ -354,6 +354,78 @@ $kategori=$row['kategori'];
 
     <script src="supplier/customer.js"></script>
      <script src="chart/Chart.js" ></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                $('#detailTrip').on('show.bs.modal', function (e) {
+                    var rowid = $(e.relatedTarget).data('id');
+                    var dat = $(e.relatedTarget).data('tang');
+                    //menggunakan fungsi ajax untuk pengambilan data
+                    $.ajax({
+                        type : 'post',
+                        url : 'detail_trip.php',
+                        data :  'rowid='+ rowid +'&dat='+ dat,
+                        success : function(data){
+                        $('.fetched-data').html(data);//menampilkan data ke dalam modal
+                    }
+                });
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function(){
+                $.ajaxSetup({
+                    type:"POST",
+                    url: "data_trip.php",
+                    cache: false,
+                });
 
+                $("#supliyer").change(function(){
+                    var tglnya = $('#pilihtanggal').val();
+                    var value = $(this).val();
+                    if(value>0){
+                        $.ajax({
+                            data:{
+                                modul : tglnya,
+                                id : value},
+                                success: function(data){
+                                    $("#tampilDataTrip").html(data);
+                                }
+                            });
+                    }else{
+                        $.ajax({
+                            data:{
+                                modul : tglnya,
+                                id : '0'},
+                                success: function(data){
+                                    $("#tampilDataTrip").html(data);
+                                }
+                            });
+                    }
+                });
+                $("#pilihtanggal").change(function(){
+                    var  value = $('#supliyer').val();
+                    var tglnya = $(this).val();
+                    if(value>0){
+                        $.ajax({
+                            data:{
+                                modul : tglnya,
+                                id : value},
+                                success: function(data){
+                                    $("#tampilDataTrip").html(data);
+                                }
+                            });
+                    }else{
+                        $.ajax({
+                            data:{
+                                modul : tglnya,
+                                id : '0'},
+                                success: function(data){
+                                    $("#tampilDataTrip").html(data);
+                                }
+                            });
+                    }
+                });
+            });
+        </script>
   </body>
   </html>
