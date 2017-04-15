@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="box-body">
-        Aplikasi ini dibuat oleh Mahasiswa TI UIN MALANG 2014 M Galang Arbi S Dan Bersifat Open Source bertujuan untuk memenuhi tugas mata kuliah Manajemen Basis Data
+        Ambar Project - Aplikasi Manajemen dan report data TRIP perusahaan
       </div><!-- /.box-body -->
       <div class="box-footer">
         Contact Support Aplikasi ini : <a href="https://www.facebook.com/GalangArbi"><i class="fa fa-facebook-square"></i></a>
