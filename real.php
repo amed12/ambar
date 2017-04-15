@@ -5,6 +5,7 @@
       <small>Apps Ambar</small>
     </h1>
     <ol class="breadcrumb">
+    <li><a class="edit-record" href="?p=input-data"><button type="button" class="btn btn-sm btn-info btn-flat">Tambah Data Trip</button></a></li>
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
       <li><a href="#">Layout</a></li>
       <li class="active">Boxed</li>

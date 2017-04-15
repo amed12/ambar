@@ -69,7 +69,7 @@ $coba = mysqli_query($koneksi, "SELECT * FROM supplier");
         </h3>
 
         <ol class="breadcrumb">
-          <li><a class="edit-record" href="?p=input-data"><button type="button" class="btn btn-sm btn-info btn-flat">Tambah Data Trip</button></a></li>
+          
           <li><a class="edit-record" href="?p=input-data"><i class="fa fa-dashboard"></i> Home</a></li>
           <li class="active">Dashboard</li>
       </ol>
