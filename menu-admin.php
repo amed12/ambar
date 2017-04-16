@@ -25,8 +25,8 @@
     </a>
   </li>
   <li>
-    <a href="?p=user/user">
-      <i class="fa fa-user"></i> <span> Manajemen User Ambar</span>
+    <a href="?p=input-pekerja_lap">
+      <i class="fa fa-user"></i> <span> Tambah Pekerja Lapangan</span>
     </a>
   </li>
 
