@@ -1,24 +1,24 @@
 <script>
-  var chart1;
-  $(document).ready(function() {
-    chart1 = new Highcharts.Chart({
-      chart: {
-        renderTo: 'mygraph',
-        type: 'column'
-      },
+var chart1;
+$(document).ready(function() {
+  chart1 = new Highcharts.Chart({
+    chart: {
+      renderTo: 'mygraph',
+      type: 'column'
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      categories: ['Nopol Kendaraan']
+    },
+    yAxis: {
       title: {
-        text: ''
-      },
-      xAxis: {
-        categories: ['Nopol Kendaraan']
-      },
-      yAxis: {
-        title: {
-          text: 'Total volume Usage'
-        }
-      },
-      series:
-      [
+        text: 'Total volume Usage'
+      }
+    },
+    series:
+    [
       <?php
       include "connection.php";
       $sql   = "SELECT nopol_armada  FROM monitor";
@@ -39,7 +39,7 @@
         },
         <?php
       } 	?>
-      ]
-    });
+    ]
   });
+});
 </script>

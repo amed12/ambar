@@ -37,7 +37,7 @@ $hari = date('l');
         <div class="col-md-2">
           <div class="input-group">
             <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-            <input type="text" class="form-control datepicker" name="tanggalPengeluaran" id="tanggalPengeluaran" value="<?php echo $hariini;?>">
+            <input type="text" class="form-control datepicker" data-date-format="yyyy-mm-dd" name="tanggalPengeluaran" id="tanggalPengeluaran" value="<?php echo $hariini;?>">
           </div>
         </div>
         <div class="col-md-2">
