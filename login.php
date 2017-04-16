@@ -33,7 +33,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Masukkan Username dan Password</p>
-    <form action="proses_login.php" method="post">
+    <form action="proses-login.php" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username" name="username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>

@@ -14,7 +14,7 @@
     <ul class="treeview-menu">
       <li><a href="?p=input-harga"><i class="fa fa-circle-o"></i> Input Pengeluaran </a></li>
       <li><a href="?p=daftar-pengeluaran"><i class="fa fa-circle-o"></i> Daftar Pengeluaran</a></li>
-      <li><a href="?p=grafik/graph"><i class="fa fa-circle-o"></i> Lihat Grafik Trip</a></li>
+      <li><a href="?p=grafik-trip"><i class="fa fa-circle-o"></i> Lihat Grafik Trip</a></li>
     </ul>
   </li>
   <li>
