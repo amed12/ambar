@@ -15,30 +15,32 @@ $row = mysqli_fetch_array($coba);
 $namauser=$row['nama_user'];
 $iduse=$row['id_user'];
 $kategori=$row['kategori'];
-$hariini = date('Y-m-d');
+$tanggal = $_GET['tanggal'];
+$idsup = $_GET['id'];
 $tgl = date('d-m-Y');
 $hari = date('l');
-
-
 
 ?>
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">
-            <input type="date" name="pilihtanggal" id="pilihtanggal" placeholder="YYYY-MM-DD" value="<?php echo $hariini;?>">&nbsp
-            <select name="supliyer" id="supliyer">
-                <option value="">Semua</option>
-                <?php
-                $querySupliyer = "SELECT * FROM `supplier`";
-                $result = $koneksi->query($querySupliyer);
-                while($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                    <option value="<?php echo $row['id_supplier'];?>"><?php echo $row['nama_pemilik'];?></option>
-                    <?php } ?>
-                </select>
-            </h3>
-            
-        </div>
+            <table style="width:100%">
+                <tr>
+                    <th><?php
+                    $querySupliyer = "SELECT * FROM `supplier` where id_supplier='$idsup'";
+                    $result = $koneksi->query($querySupliyer);
+                    while($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                        Nama Suplier : <?php echo $row['nama_pemilik'];?>
+                        <?php } ?>
+                        <br>
+                    Tanggal : <?php echo $tanggal;?>
+                    </th>
+                    <th align="right"><a href="?p=daftar-pengeluaran"><span class="btn btn-success">Back</span></a></th>
+                </tr>
+                </table>
+        </h3>        
+    </div>
         <div class="panel-body">
             <table class="table datatable table-bordered table-hover">
                 <thead>
@@ -47,16 +49,15 @@ $hari = date('l');
                         <th>NOPOL</th>
                         <th>JUMLAH TRIP</th>
                         <th>JUMLAH VOLUME</th>
-                        <th>KET</th>
                         <th>AKSI</th>
                     </tr>
                 </thead>
                 <tbody id="tampilDataTrip">
                     <?php
-                    $queryMonitor = "SELECT DISTINCT(`nopol_armada`) FROM `monitor` where waktu_input='$hariini';";
+                    $queryMonitor = "SELECT DISTINCT(`nopol_armada`) FROM `monitor` where waktu_input='$tanggal' and id_supplier='$idsup';";
                     $result = $koneksi->query($queryMonitor);
                     while($row = mysqli_fetch_assoc($result)) {
-                        $queryMonitorNopol = mysqli_query($koneksi, "SELECT SUM(`volume`),COUNT(*),nama_supir,waktu_input FROM `monitor` where nopol_armada='$row[nopol_armada]' and waktu_input='$hariini';");
+                        $queryMonitorNopol = mysqli_query($koneksi, "SELECT SUM(`volume`),COUNT(*),nama_supir,waktu_input FROM `monitor` where nopol_armada='$row[nopol_armada]' and waktu_input='$tanggal';");
                         $dataMonitorNopol = mysqli_fetch_array($queryMonitorNopol);
                         ?>
                         <tr>
@@ -64,7 +65,6 @@ $hari = date('l');
                             <td><?php echo $row['nopol_armada'];?></td>
                             <td><?php echo $dataMonitorNopol['COUNT(*)'];?></td>
                             <td><?php echo $dataMonitorNopol['SUM(`volume`)'];?></td>
-                            <td></td>
                             <td><a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-id="<?php echo $row['nopol_armada']; ?>" data-tang="<?php echo $dataMonitorNopol['waktu_input'];?>" data-target="#detailTrip"><b>Detail</b></a></td>
                         </tr>
                         <?php } ?>
@@ -89,7 +89,6 @@ $hari = date('l');
                                         <th>NOPOL</th>
                                         <th>JUMLAH TRIP</th>
                                         <th>JUMLAH VOLUME</th>
-                                        <th>KET</th>
                                     </tr>
                                 </thead>
                                 <tbody class="fetched-data">

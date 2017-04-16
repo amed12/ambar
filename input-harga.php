@@ -23,7 +23,6 @@ if(isset($_POST['btnInputHarga']))
         if($koneksi->query($stmt)===true)
         {
             $successMSG = "Harga berhasil ditambahkan ...";
-                       // header("berangkat.php"); // redirects image view page after 5 seconds.
             ?>
             <script language="javascript">
                 alert("Harga berhasil ditambahkan");

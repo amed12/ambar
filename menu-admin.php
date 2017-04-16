@@ -14,7 +14,8 @@
       <span>Monitoring dan report TRIP</span>
     </a>
     <ul class="treeview-menu">
-      <li><a href=""><i class="fa fa-circle-o"></i> Input pengeluaran </a></li>
+      <li><a href="?p=input-harga"><i class="fa fa-circle-o"></i> Input pengeluaran </a></li>
+      <li><a href="?p=daftar-pengeluaran"><i class="fa fa-circle-o"></i> Daftar Pengeluaran</a></li>
       <li><a href="?p=grafik/graph"><i class="fa fa-circle-o"></i> Lihat grafik trip</a></li>
     </ul>
   </li>
