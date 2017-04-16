@@ -72,8 +72,8 @@ $hari = date('l');
                             <td><?php echo $dataMonitorNopol['nama_pemilik'];?></td>
                             <td><?php if($dataMonitorNopol['COUNT(*)']!=0){echo $dataMonitorNopol['COUNT(*)'];}?></td>
                             <td><?php echo $dataMonitorNopol['SUM(`volume`)'];?></td>
-                            <td><?php echo $dataMonitorNopol['harga_volume'];?></td>
-                            <td><?php echo $dataMonitorNopol['SUM(`volume`)']*$dataMonitorNopol['harga_volume'];?></td>
+                            <td><strong>Rp. </strong><?php echo $dataMonitorNopol['harga_volume'];?></td>
+                            <td><strong>Rp. </strong><?php echo $dataMonitorNopol['SUM(`volume`)']*$dataMonitorNopol['harga_volume'];?></td>
                             <td><a href="?p=detail-trip&id=<?php echo $row['id_supplier'];?>&tanggal=<?php echo $dataMonitorNopol['waktu_input'];?>" class="btn btn-success btn-sm"><b>Detail</b></a></td>
                         </tr>
                         <?php }} ?>
