@@ -1,30 +1,11 @@
 <?php 
 error_reporting( ~E_NOTICE ); // avoid notice
 require_once 'koneksi.php';
-
-if(isset($errMSG)){
-  ?>
-  <div class="alert alert-danger">
-    <span class="glyphicon glyphicon-info-sign"></span> <strong><?php echo $errMSG; ?></strong>
-  </div>
-  <?php
-}
-else if(isset($successMSG)){
-  ?>
-  <div class="alert alert-success">
-    <strong><span class="glyphicon glyphicon-info-sign"></span> <?php echo $successMSG; ?></strong>
-  </div>
-  <?php
-}
-
 $coba = mysqli_query($koneksi, "SELECT u.id_user,u.nama_user,u.tanggal_gabung,u.alamat,u.no_telp,u.username,u.password,l.level FROM usr_ambar u,level l WHERE u.id_level=l.id_level AND l.level='petugas'");
 
 $no=1;
 ?>
-
-<link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
-<!-- Daterange picker -->
-<link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+<div>
 <div class="row">
   <div class="col-md-12">
     <section class="content-header">
@@ -36,13 +17,13 @@ $no=1;
         <li><a class="edit-record" href="?p=input-data"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
-    </section>t
+    </section>
   </div>
 </div>  
 <div class="col-md-12">
   <div class="panel-body">
     <button data-toggle="modal" data-target="#myModal" class="btn btn-info pull-left"><span class="fa fa-plus"></span>Tambah Pekerja Lapangan</button>
-    <table id="customers2" class="table datatable">
+    <table id="customers2" class="table datatable table-bordered table-hover">
       <thead>
         <tr>
           <th>No</th>
@@ -53,6 +34,7 @@ $no=1;
           <th>Password</th>
           <th>Level</th>
           <th>Tanggal Gabung</th>
+          <th>AKSI</th>
         </tr>
       </thead>
       <tbody>
@@ -64,7 +46,7 @@ $no=1;
           <td><?php echo $row['alamat'];?></td>
           <td><?php echo $row['no_telp'];?></td>
           <td><?php echo $row['username'];?></td>
-          <td><?php echo md5($row['password']);?></td>
+          <td><?php echo $row['password'];?></td>
           <td><?php echo $row['level'];?></td>
           <td><?php echo $row['tanggal_gabung'];?></td>
           <td>
@@ -77,7 +59,6 @@ $no=1;
       </tbody>
     </table>
   </div>
-</div>
 </div>
 
 <!-- modal input -->
@@ -129,14 +110,4 @@ $no=1;
     </div>
   </div>
 </div>
-
-
-<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
-<script>
-  $(function () 
-  {
-    $('#datepicker').datepicker({
-      autoclose: true
-    });
-  }
-</script>
+</div>

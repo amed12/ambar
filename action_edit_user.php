@@ -65,18 +65,7 @@ if(isset($_POST['save'])){
               <input type="text" class="form-control" id="tanggal_gabung" placeholder="Tanggal Gabung" value="<?php echo $tanggal_gabung ?>" name="tanggal_gabung">
             </div>
           </div>
-          <div class="form-group">
-            <label for="nama" class="col-sm-3 control-label">Tanggal Gabung</label>
-            <div class="input-group date col-sm-4">
-              <div class="input-group-addon">
-                <i class="fa fa-calendar"></i>
-              </div>
-              <input type="text" class="form-control pull-right" id="datepicker" name="tanggal_gabung6"><br/>
-              <span class="help-block">Ex. 22</span>
-            </div>
 
-            <!-- /.input group -->
-          </div>
           <div class="form-group">
             <label for="nama" class="col-sm-3 control-label">Alamat</label>
             <div class="col-sm-4">
@@ -102,8 +91,6 @@ if(isset($_POST['save'])){
             </div>
           </div>
           <div class="col-sm-8 box-footer pull-right">
-            <button type="button" class="btn btn-default" id="reset1">Reset</button>
-            <button type="button" href="action_delete_user.php?id=<?php echo $id_user; ?>" class="btn btn-danger" id="Delete" onclick="return confirm('Anda Yakin Ingin Menghapus Data')">Delete</button>
             <button type="submit" name="save" onclick="alert('Data Berhasil DiUpdate')" class="btn btn-info">Update</button>
           </div>
 
