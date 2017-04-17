@@ -1,13 +1,7 @@
 <?php
-session_start();
+
 include 'koneksi.php';
-if (empty($_SESSION['id_user'])){
-    header("location:login.php");
-}
-error_reporting(E_ALL & ~E_NOTICE);
-ob_start();
-$p=htmlentities($_GET['p']);
-$iduser=$_SESSION['id_user'];
+
 
 $coba = mysqli_query($koneksi, "SELECT * FROM usr_ambar u,level l WHERE u.id_level = l.id_level AND id_user = $iduser");
 $row = mysqli_fetch_array($coba);
@@ -87,7 +81,7 @@ $hari = date('l');
                                         <th>NOPOL</th>
                                         <th>JUMLAH TRIP</th>
                                         <th>JUMLAH VOLUME</th>
-                                    </tr>
+                                     </tr>
                                 </thead>
                                 <tbody class="fetched-data">
                                 </tbody>

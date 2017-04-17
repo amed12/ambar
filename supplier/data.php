@@ -1,12 +1,10 @@
 <?php
 include "config.php";
-$query=mysql_query("SELECT @rownum := @rownum + 1 AS urutan,t.*
-	FROM supplier t,
-	(SELECT @rownum := 0) r");
+$query=mysqli_query($koneksi,"SELECT @rownum := @rownum + 1 AS urutan,t.* FROM supplier t, (SELECT @rownum := 0) r");
 $data = array();
-while($r = mysql_fetch_assoc($query)) {
+while($r = mysqli_fetch_assoc($query)) {
 	$data[] = $r;
-}
+} 
 $i=0;
 foreach ($data as $key) {
 		// add new button
