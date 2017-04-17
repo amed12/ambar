@@ -1,15 +1,15 @@
 <?php
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "db_ambar";
+$db_host = "mysql.idhostinger.com";
+$db_user = "u520988298_ambar";
+$db_pass = "12345678";
+$db_name = "u520988298_ambar";
 
 $koneksi = mysqli_connect($db_host, $db_user, $db_pass, $db_name) or die();
 
-if(mysqli_connect()){
+if($koneksi){
 	// echo "sukses";
-} else if(mysqli_connect_errno()){
-	echo 'Gagal melakukan koneksi ke Database : '.mysqli_connect_error();
+} else {
+	echo 'Gagal melakukan koneksi ke Database';
 }
 
 $waktu=date("Y-m-d");

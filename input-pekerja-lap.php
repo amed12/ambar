@@ -69,7 +69,7 @@ $no=1;
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title">Tambah User</h4>
       </div>
-      <form role="form" action="action_add_user.php" method="post">
+      <form role="form" action="action-add-user.php" method="post">
         <div class="modal-body">
           <div class="form-group">
             <div class="form-group">
