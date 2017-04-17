@@ -109,8 +109,13 @@ $kategori=$row['kategori'];
       $file="$p.php";
       $cek=strlen($p);
       if ($cek>30||!file_exists($file)||empty($p)) {
-        include ("dashboard-admin.php");
+        if($lev['level']=='admin'){
+          include "dashboard2.php";
+        }
 
+        if($lev['level']=='petugas'){
+          include "dashboard-admin.php";
+        }
       } else {
         include ($file);
       }

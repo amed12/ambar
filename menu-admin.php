@@ -19,7 +19,7 @@
   </li>
   <li>
     <a href="?p=supplier/supplier">
-      <i class="fa fa-user"></i> <span> Manajemen Supplier</span>
+      <i class="fa fa-user"></i> <span> Tambah Supplier</span>
     </a>
   </li>
   <li>
