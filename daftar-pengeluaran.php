@@ -58,7 +58,7 @@ $hari = date('l');
         </div>
         <br><hr>
         <table id="tabelPengeluaran" class="table table-striped table-bordered table-hover">
-          <thead>
+          <thead style="background: #A7A3A3">
             <tr class="tableheader">
               <th>Supplier</th>
               <th>Jumlah Trip</th>

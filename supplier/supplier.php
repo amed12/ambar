@@ -1,6 +1,6 @@
 <section class="content">
   <div class="box">
-    <div class="box-header with-border">
+    <div class="box-header with-border" style="background: #D1D0D0">
       <h3 class="box-title">Managemen Supplier</h3>
       <div class="box-tools pull-right">
         <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
@@ -13,20 +13,18 @@
       <br>
       <table id="table_cust" class="table table-striped table-bordered table-hover">
         <thead>
-          <tr class="tableheader">
-            <th>#</th>
+          <tr class="tableheader" style="background: #A7A3A3">
+            <th>No</th>
             <th>Nama Pemilik(Supplier)</th>
             <th>Alamat</th>
             <th>No telepon</th>
             <th>Tanggal Gabung</th>
+            <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
         </tbody>
       </table>
-    </div>
-    <div class="box-footer">
-      Contact Support Aplikasi ini : <i class="fa fa-facebook-square"></i></a>
     </div>
   </div>
 </section>
@@ -35,7 +33,7 @@
 <div id="modalcust" class="modal">
   <div class="modal-dialog modal-md">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header" style="background: #D1D0D0">
         <button type="button" class="close" data-dismiss="modal">×</button>
         <h4 class="modal-title">Form Master Customer</h4>
       </div>

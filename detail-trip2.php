@@ -1,7 +1,13 @@
 <?php
-
+session_start();
 include 'koneksi.php';
-
+if (empty($_SESSION['id_user'])){
+    header("location:login.php");
+}
+error_reporting(E_ALL & ~E_NOTICE);
+ob_start();
+$p=htmlentities($_GET['p']);
+$iduser=$_SESSION['id_user'];
 
 $coba = mysqli_query($koneksi, "SELECT * FROM usr_ambar u,level l WHERE u.id_level = l.id_level AND id_user = $iduser");
 $row = mysqli_fetch_array($coba);
@@ -35,7 +41,7 @@ $hari = date('l');
         </div>
         <div class="panel-body">
             <table class="table datatable table-bordered table-hover">
-                <thead>
+                <thead style="background: #A7A3A3">
                     <tr>
                         <th>SOPIR</th>
                         <th>NOPOL</th>
@@ -68,28 +74,28 @@ $hari = date('l');
         <div class="modal fade" id="detailTrip" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header" style="background: #4290B8; color: white;">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Detail Trip</h4>
                     </div>
                     <div class="modal-body">
                         <div class="panel-body">
                             <table class="table datatable table-bordered table-hover">
-                                <thead>
+                                <thead style="background: #A7A3A3">
                                     <tr>
                                         <th>SOPIR</th>
                                         <th>NOPOL</th>
                                         <th>JUMLAH TRIP</th>
                                         <th>JUMLAH VOLUME</th>
-                                     </tr>
+                                    </tr>
                                 </thead>
                                 <tbody class="fetched-data">
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div class="modal-footer" style="background: #D1D0D0">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,11 @@
 <ul class="sidebar-menu">
   <li class="header">MAIN NAVIGATION</li>
   <li>
+    <a href="index.php">
+      <i class="fa fa-th"></i> <span> Dashboard </span>
+    </a>
+  </li>
+  <li>
     <a href="?p=input-data">
       <i class="fa fa-files-o"></i><span> Input Data Trip </span></i>
     </a>

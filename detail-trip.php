@@ -43,7 +43,7 @@ $hari = date('l');
     </div>
     <div class="panel-body">
       <table class="table datatable table-bordered table-hover">
-        <thead>
+        <thead style="background: #A7A3A3">
           <tr>
             <th>Sopir</th>
             <th>Nopol</th>
@@ -65,7 +65,7 @@ $hari = date('l');
               <td><?php echo $row['nopol_armada'];?></td>
               <td><?php echo $dataMonitorNopol['COUNT(*)'];?></td>
               <td><?php echo $dataMonitorNopol['SUM(`volume`)'];?></td>
-              <td><a href="#" class="btn btn-primary btn-flat" data-toggle="modal" data-id="<?php echo $row['nopol_armada']; ?>" data-tang="<?php echo $dataMonitorNopol['waktu_input'];?>" data-target="#detailTrip"><b>Detail</b></a></td>
+              <td><a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-id="<?php echo $row['nopol_armada']; ?>" data-tang="<?php echo $dataMonitorNopol['waktu_input'];?>" data-target="#detailTrip"><b>Detail</b></a></td>
             </tr>
             <?php } ?>
           </tbody>
@@ -77,14 +77,14 @@ $hari = date('l');
   <div class="modal fade" id="detailTrip" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header" style="background: #4290B8; color: white;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Detail Trip</h4>
         </div>
         <div class="modal-body">
           <div class="panel-body">
-            <table class="table datatable table-bordered table-hover">
-              <thead>
+            <table class="table datatable table-bordered table-striped">
+              <thead style="background: #A7A3A3">
                 <tr>
                   <th>Sopir</th>
                   <th>Nopol</th>
@@ -97,7 +97,7 @@ $hari = date('l');
             </table>
           </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="background: #D1D0D0">
           <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Tutup</button>
         </div>
       </div>

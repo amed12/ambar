@@ -62,7 +62,7 @@ if(isset($_POST['btnInputHarga']))
 
 <section class="content">
   <div class="box">
-    <div class="box-header with-border">
+    <div class="box-header with-border" style="background: #D1D0D0">
       <h3 class="box-title">Input Harga</h3>
       <div class="box-tools pull-right">
         <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
@@ -116,7 +116,7 @@ if(isset($_POST['btnInputHarga']))
           </div>
         </div>
       </div>
-      <div class="box-footer">
+      <div class="box-footer" style="background: #D1D0D0">
         <button type="reset" class="btn btn-default btn-flat">Reset</button>
         <button type="submit" class="btn btn-success pull-right btn-flat" name="btnInputHarga">Input Harga</button>
       </div><!-- /.box-footer-->

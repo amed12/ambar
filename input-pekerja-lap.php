@@ -8,7 +8,7 @@ $no=1;
 
 <section class="content">
   <div class="box">
-    <div class="box-header with-border">
+    <div class="box-header with-border" style="background: #D1D0D0">
       <h3 class="box-title">Manajemen Pekerja Lapangan</h3>
       <div class="box-tools pull-right">
         <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
@@ -55,9 +55,6 @@ $no=1;
         </tbody>
       </table>
     </div><!-- /.box-body -->
-    <div class="box-footer">
-      Contact Support Aplikasi ini : <a href="https://www.facebook.com/GalangArbi"><i class="fa fa-facebook-square"></i></a>
-    </div><!-- /.box-footer-->
   </div><!-- /.box -->
 </section><!-- /.content -->
 
@@ -65,7 +62,7 @@ $no=1;
 <div id="myModal" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header" style="background: #D1D0D0">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title">Tambah User</h4>
       </div>
@@ -100,7 +97,7 @@ $no=1;
             </div>
           </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="background: #D1D0D0">
           <button type="submit" class="btn btn-success btn-flat" onsubmit="return cekform();">Submit</button>
           <button type="reset" class="btn btn-primary btn-flat">Reset</button>
           <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Batal</button>

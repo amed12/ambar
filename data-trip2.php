@@ -14,7 +14,7 @@ $no=1;
     </div>
     <div class="panel-body">
       <table id="customers2" class="table datatable">
-        <thead>
+        <thead style="background: #A7A3A3">
           <tr>
             <th>No</th>
             <th>Sopir</th>
@@ -23,7 +23,6 @@ $no=1;
             <th>Jenis Bak</th>
             <th>Volume</th>
             <th>Tanggal</th>
-            <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
